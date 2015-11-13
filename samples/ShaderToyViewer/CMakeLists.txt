@@ -105,8 +105,8 @@ set(SRC_FOR_EXCUTABLE
   ${NV_MATH_HEADERS_LOCAL}
   ${BK3D_HEADERS}
   ${WIN_SRC}
-  ${SHADER_DIR_LOCAL}/Camera.h
-  ${SHADER_DIR_LOCAL}/Realtime.h
+  ${SHARED_DIR}/Camera.h
+  ${SHARED_DIR}/Realtime.h
 )
 
 if(WIN32)
