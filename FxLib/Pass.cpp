@@ -1766,7 +1766,7 @@ bool Pass::validate()
         m_validated &= ~VALIDATED_PASS;
     else
         m_validated |= VALIDATED_PASS;
-    return m_validated;
+    return m_validated > 0;
 }
 /*************************************************************************/ /**
  **
@@ -2102,7 +2102,7 @@ bool Pass::validateUniformTextureUnits(bool allowUnitAssignment)
                 case IUniform::TTexture2DRect:
                 case IUniform::TTexture3D:
                 case IUniform::TTextureCube:
-					validateUniformTextureUnit((*its)->m_uniformSrc, it->first);
+					validateUniformTextureUnit((*its)->m_uniformSrc, bool(it->first));
                     (*its)->apply(true, NULL);
                     break;
                 default:
@@ -2351,7 +2351,7 @@ bool Pass::execute(PassInfo * pr, unsigned int cancelInternalAction)
         // decide to optimize the binding.
         //if(pr->prevFBO != pr->currentFBO)
         {
-            pRep->setCurrent(pr->currentFBO, ((pr->flags & PR_VIEWPORT)));
+            pRep->setCurrent(pr->currentFBO, bool(pr->flags & PR_VIEWPORT));
         }
         pr->prevFBO = pr->currentFBO;
     }

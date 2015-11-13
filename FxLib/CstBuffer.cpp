@@ -90,7 +90,7 @@ bool		CstBuffer::bindBufferRange(int n, IPass* pPass)
 			updateForTarget(m_activeTarget);
 		} else {
 			Pass* pP = static_cast<Pass*>(pPass);
-			for(int i=0; i<m_targets.size(); i++)
+			for(size_t i=0; i<m_targets.size(); i++)
 			{
 				if((m_targets[i].pass == pPass)&&(m_targets[i].passLayerId == pP->getActiveProgramLayer()))
 				{

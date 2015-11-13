@@ -1432,7 +1432,7 @@ IUniform*    Uniform::updateValue2i(int f1, int f2, IPass *pass)
     SETTYPE(m_type, Uniform::TInt2);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    int vv[1];
+    //int vv[1];
     v.ivals[0] = f1; v.ivals[1] = f2;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;
@@ -1443,7 +1443,7 @@ IUniform*    Uniform::updateValue3i(int f1, int f2, int f3, IPass *pass)
     SETTYPE(m_type, Uniform::TInt3);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    int vv[2];
+    //int vv[2];
     v.ivals[0] = f1; v.ivals[1] = f2; v.ivals[2] = f3;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;
@@ -1454,7 +1454,7 @@ IUniform*    Uniform::updateValue4i(int f1, int f2, int f3, int f4, IPass *pass)
     SETTYPE(m_type, Uniform::TInt4);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    int vv[3];
+    //int vv[3];
     v.ivals[0] = f1; v.ivals[1] = f2; v.ivals[2] = f3; v.ivals[3] = f4;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;
@@ -1517,7 +1517,7 @@ IUniform*    Uniform::updateValue2b(bool f1, bool f2, IPass *pass)
     SETTYPE(m_type, Uniform::TBool2);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    bool vv[1];
+    //bool vv[1];
     v.bvals[0] = f1; v.bvals[1] = f2;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;
@@ -1528,7 +1528,7 @@ IUniform*    Uniform::updateValue3b(bool f1, bool f2, bool f3, IPass *pass)
     SETTYPE(m_type, Uniform::TBool3);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    bool vv[2];
+    //bool vv[2];
     v.bvals[0] = f1; v.bvals[1] = f2; v.bvals[2] = f3;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;
@@ -1539,7 +1539,7 @@ IUniform*    Uniform::updateValue4b(bool f1, bool f2, bool f3, bool f4, IPass *p
     SETTYPE(m_type, Uniform::TBool4);
     //if(m_data) delete m_data; m_data = NULL;
     ShadowedData v;
-    bool vv[3];
+    //bool vv[3];
     v.bvals[0] = f1; v.bvals[1] = f2; v.bvals[2] = f3; v.bvals[3] = f4;
     update(&v, p,p->getActiveProgramLayer(), false);
     return this;

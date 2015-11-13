@@ -218,7 +218,7 @@ void nvFX::getID(int *ids, int numids)
 
 void Program::addTarget(Pass* p, int layerID)
 {
-    for(int i=0; i<m_targets.size(); i++)
+    for(size_t i=0; i<m_targets.size(); i++)
     {
         STarget& t = m_targets[i];
         if((t.pass == p) && (t.passLayerId == layerID))
@@ -449,7 +449,7 @@ IShader*    ShaderModuleRepository::getShader(int i)
 }
 IProgram*   ShaderModuleRepository::getProgram(int i)
 {
-    if(i >= m_programs.size())
+    if(size_t(i) >= m_programs.size())
         return NULL;
     return m_programs[i].p;
 }
@@ -846,7 +846,7 @@ bool    Shader::setAsKernel(int nArgs, Argument* args, const char * funcName)
         return false;
     std::string funcHeader;
     m_kernelName = std::string(funcName);
-    int i=0;
+    size_t i=0;
 
     for(; i<m_kernelArgs.size(); i++)
         delete [] m_kernelArgs[i].argName;
