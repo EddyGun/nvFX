@@ -538,7 +538,7 @@ void StateGroupPathGL::apply(IPass *pass, PassInfo * pr, int n)
             {
             case GL_PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV:
             // No need of case GL_PATH_STENCIL_DEPTH_OFFSET_UNITS_NV:
-                glPathStencilDepthOffsetNV(s->fval[0], (int)s->fval[1]);
+                glPathStencilDepthOffsetNV(s->fval[0], /*(int)*/s->fval[1]);
                 break;
             case GL_PATH_STROKE_WIDTH_NV:
             case GL_PATH_MITER_LIMIT_NV:

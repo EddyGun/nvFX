@@ -586,7 +586,7 @@ bool CstBufferGL::updateFromUniforms(bool bForceUpdating)
     //
     // Now map the buffer and do the updates
     //
-    char *cb;
+    //char *cb;
     glBindBuffer(GL_UNIFORM_BUFFER, m_bufferId);
 #if 0
     cb = (char*)glMapBuffer(GL_UNIFORM_BUFFER, GL_WRITE_ONLY);
